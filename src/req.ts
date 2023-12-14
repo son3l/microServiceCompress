@@ -3,7 +3,7 @@ import req from 'request';
 import * as fs from 'fs';
 @Injectable()
 export class Upload {
-  uploadFile(fileName: string): Promise<any> {
+  uploadFile(fileName: string): void {
     req.post(
       {
         url: `YOUR API URL TO UPLOAD FILE`,
@@ -19,6 +19,5 @@ export class Upload {
         console.log(console.log('body =>' + body + '\n err =>' + err));
       },
     );
-    return;
   }
 }
